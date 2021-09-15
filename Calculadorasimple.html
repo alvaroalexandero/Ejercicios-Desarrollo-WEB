@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Simple</title>
+  </head>
+  <body>
+    <section style="margin: 2%">
+      <h1>Calculadora Básica</h1>
+      <!-- Captura de números -->
+      <p>Por favor, digita dos números:</p>
+      <input id="num1" />
+      <input id="num2" />
+
+      <!-- botones -->
+      <button type="button" onclick="sumatoria()">Sumar</button>
+      <button type="button" onclick="sustraccion()">Restar</button>
+      <button type="button" onclick="producto()">multiplicar</button>
+      <button type="button" onclick="division()">dividir</button>
+
+      <p id="operaciones"></p>
+    </section>
+    <script>
+      /* función para sumar */
+      function sumatoria() {
+        var n1, n2, suma;
+        n1 = document.getElementById("num1").value;
+        n2 = document.getElementById("num2").value;
+        suma = parseFloat(n1) + parseFloat(n2);
+        document.getElementById("operaciones").innerHTML =
+          "La suma es: " + suma;
+      }
+
+      /* función para restar */
+      function sustraccion() {
+        var n1, n2, res;
+        n1 = document.getElementById("num1").value;
+        n2 = document.getElementById("num2").value;
+        res = parseFloat(n1) - parseFloat(n2);
+        document.getElementById("operaciones").innerHTML =
+          "La resta es: " + res;
+      }
+
+      /* función para multiplicar */
+      function producto() {
+        var n1, n2, pro;
+        n1 = document.getElementById("num1").value;
+        n2 = document.getElementById("num2").value;
+        pro = parseFloat(n1) * parseFloat(n2);
+        document.getElementById("operaciones").innerHTML =
+          "La multiplicación es: " + pro;
+      }
+
+      /* función para dividir */
+      function division() {
+        var n1, n2, divis;
+        n1 = document.getElementById("num1").value;
+        n2 = document.getElementById("num2").value;
+        divis = parseFloat(n1) / parseFloat(n2);
+        document.getElementById("operaciones").innerHTML =
+          "La división es: " + divis;
+      }
+    </script>
+  </body>
+</html>
